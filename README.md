@@ -3,77 +3,93 @@
 
 Greub, Lucena Losada, Manser
 
-| Datum | Version | Zusammenfassung                                              |
-| ----- | ------- | ------------------------------------------------------------ |
-|       | 0.0.1   | ✍️ Jedes Mal, wenn Sie an dem Projekt arbeiten, fügen Sie hier eine neue Zeile ein und beschreiben in *einem* Satz, was Sie erreicht haben. |
-|       | ...     |                                                              |
-|       | 1.0.0   |                                                              |
-
 ## 1 Informieren
+
 
 ### 1.1 Ihr Projekt
 
-✍️ Beschreiben Sie Ihr Projekt in einem griffigen Satz.
+Ein vielseitiger Zahlensystem-Rechner zur Umwandlung zwischen Hexadezimal, Dezimal und Binär.
 
-✍️ Erklären Sie genauer in 50 bis 100 Wörtern, was genau Sie in diesem Projekt erreichen möchten, und was Sie dabei zu lernen hoffen.
+Der Rechner sollte zwischen Hexadezimal, dezimal und Binär umrechnen können, es sollte ein GUI haben sowie in c# geschrieben werden.
 
 ### 1.2 User Stories
 
 | US-№ | Verbindlichkeit | Typ  | Beschreibung                       |
 | ---- | --------------- | ---- | ---------------------------------- |
-| 1    |                 |      | Als ein 🤷‍♂️ möchte ich 🤷‍♂️, damit 🤷‍♂️ |
-| ...  |                 |      |                                    |
+|1|	Muss|	Funktional|	Als Nutzer möchte ich Dezimalzahlen in Binär umwandeln, um Berechnungen im Binärsystem durchzuführen.|
+|2|	Muss|	Funktional|	Als Nutzer möchte ich Binärzahlen in Dezimal umwandeln, um alltägliche Zahlen zu verstehen.|
+|3|	Muss|	Funktional|	Als Nutzer möchte ich Hexadezimalzahlen in Dezimal umwandeln, um einfacher mit Hardware-naher Software zu arbeiten.|
+|4|	Muss|	Funktional|	Als Nutzer möchte ich Dezimalzahlen in Hexadezimal umwandeln, um Farbcodes für Webseiten zu generieren.|
+|5|	Muss|	Funktional|	Als Nutzer möchte ich Binärzahlen in Hexadezimal umwandeln, um Fehlermeldungen zu decodieren.|
+|6| muss| Funktional | Als Nutzer möchte ich Hexadezimalzahlen in Binär umwandeln.|
+|7|	Kann|	Qualität|	Als Entwickler möchte ich, dass der Code gut kommentiert ist, damit zukünftige Wartungen leichter fallen.|
+|8|	Muss|	Qualität|	Als Nutzer möchte ich eine klare und intuitive Benutzeroberfläche haben, damit ich leicht navigieren kann.|
+|9|	Kann|	Rand|	Als Nutzer möchte ich eine Historie meiner letzten Umwandlungen sehen, um schnell auf frühere Ergebnisse zurückgreifen zu können.|
+|10|	Muss	|Funktional|	Als Nutzer möchte ich Fehlermeldungen erhalten, wenn ich ungültige Eingaben mache, um meine Eingaben korrigieren zu können.|
 
-✍️ Jede User Story hat eine ganzzahlige Nummer (1, 2, 3 etc.), eine Verbindlichkeit (Muss oder Kann?), und einen Typ (Funktional, Qualität, Rand). Die User Story selber hat folgende Form: *Als ein 🤷‍♂️ möchte ich 🤷‍♂️, damit 🤷‍♂️*.
 
 ### 1.3 Testfälle
 
 | TC-№ | Ausgangslage | Eingabe | Erwartete Ausgabe |
 | ---- | ------------ | ------- | ----------------- |
-| 1.1  |              |         |                   |
-| ...  |              |         |                   |
+|1.1|	Start des Programms|	10 (Dezimal)|	1010 (Binär)|
+|2.1|	Start des Programms|	1010 (Binär)|	10 (Dezimal)|
+|3.1|	Start des Programms|	1A (Hex)	26| (Dezimal)|
+|4.1|	Start des Programms|	255 (Dezimal)|	FF (Hex)|
+|5.1|	Start des Programms|	1010 (Binär)|	A (Hex)|
+|6.1|	Start des Programms|	A (Hex)|	1010(Binär)|
+| 8.1| Start des Programms| - | Klare UI Sichtbar |
+|9.1|	Mehrfache Eingaben|	10 Umwandlungen|	Anzeige der Historie|
+|10.1|	Falsche Eingabe|	2X (Hex)|	Fehlermeldung|
 
-✍️ Die Nummer hat das Format `N.m`, wobei `N` die Nummer der User Story ist, die der Testfall abdeckt, und `m` von `1` an nach oben gezählt. Beispiel: Der dritte Testfall, der die zweite User Story abdeckt, hat also die Nummer `2.3`.
-
-### 1.4 Diagramme
-
-✍️Fügen Sie hier ein Use Case-Diagramm mit mindestens 3 Anwendungsfällen ein; und eine Skizze davon, wie Ihre Netzseite aussehen sollte.
 
 ## 2 Planen
 
 | AP-№ | Frist | Zuständig | Beschreibung | geplante Zeit |
 | ---- | ----- | --------- | ------------ | ------------- |
-| 1.A  |       |           |              |               |
-| ...  |       |           |              |               |
+| 1.A  | 19.04.2024| Manser Alberto | Dezimal -> Binär       | 45|
+| 2.A  | 19.04.2024| Manser Alberto | Binär -> Dezimal       | 45|
+| 3.A  | 19.04.2024| Lucena Samuel  | Hexadezimal -> Dezimal | 2 x 45 |
+| 4.A  | 19.04.2024| Lucena Samuel  | Dezimal -> Hexadezimal | 2 x 45 |
+| 5.A  | 19.04.2024| Manser Alberto | Hexadezimal -> Binär   | 2 x 45|
+| 6.A  | 19.04.2024| Manser Alberto | Binär -> Hexadezimal   | 2 x 45|
+| 7.A  | 26.04.2024| Greub Manuel | Code mit Kommentaren Bestücken | 2 x 45 |
+| 8.A  | 26.04.2024| Greub Manuel | GUI implementieren und Rechner einfügen | 2 x 45 |
+| 10.A | 26.04.2024| Greub Manuel | Implementierung Fehlerabfang | 45 |
 
-Total: 
+Total: 15 x 45
 
-✍️ Die Nummer hat das Format `N.m`, wobei `N` die Nummer der User Story ist, auf die sich das Arbeitspaket bezieht, und `m` von `A` an nach oben buchstabiert. Beispiel: Das dritte Arbeitspaket, das die zweite User Story betrifft, hat also die Nummer `2.C`.
-
-✍️ Ein Arbeitspaket sollte etwa 45' für eine Person in Anspruch nehmen. Die totale Anzahl Arbeitspakete sollte etwa Folgendem entsprechen: `Anzahl R-Sitzungen` ╳ `Anzahl Gruppenmitglieder` ╳ `4`. Wenn Sie also zu dritt an einem Projekt arbeiten, für welches zwei R-Sitzungen geplant sind, sollten Sie auf `2` ╳ `3` ╳`4` = `24` Arbeitspakete kommen. Sollten Sie merken, dass Sie hier nicht genügend Arbeitspakte haben, denken Sie sich weitere "Kann"-User Stories für Kapitel 1.2 aus.
 
 ## 3 Entscheiden
 
-✍️ Dokumentieren Sie hier Ihre Entscheidungen und Annahmen, die Sie im Bezug auf Ihre User Stories und die Implementierung getroffen haben.
+Wegen komplikationen haben wir uns entschieden die Userstory 9 sowie den Testfall 9.1 nicht zu implementieren
 
 ## 4 Realisieren
 
 | AP-№ | Datum | Zuständig | geplante Zeit | tatsächliche Zeit |
 | ---- | ----- | --------- | ------------- | ----------------- |
-| 1.A  |       |           |               |                   |
-| ...  |       |           |               |                   |
-
-✍️ Tragen Sie jedes Mal, wenn Sie ein Arbeitspaket abschließen, hier ein, wie lang Sie effektiv dafür hatten.
+| 1.A  | 5.04.2024 | Manser Alberto |  45 |  30 |
+| 2.A  | 5.04.2024 | Manser Alberto |  45 |  30 |
+| 3.A  | 5.04.2024 | Lucena Samuel  | 2 x 45 | 2 x 45 |
+| 4.A  | 5.04.2024 | Lucena Samuel  | 2 x 45 | 2 x 45 |
+| 5.A  |5.04.2024 | Manser Alberto | 2 x 45 | 60 |
+| 6.A  | 5.04.2024 | Manser Alberto | 2 x 45 | 45 |
+| 7.A  | 26.04.2024 | Greub Manuel | 45 | 20 |
+| 8.A | 19.04.2024 | Greub Manuel | 2 x 45 | 3 x 45 |
+| 10.A| 19.04.2024 | Greub Manuel | 45 | 30 |
 
 ## 5 Kontrollieren
 
 | TC-№ | Datum | Resultat | Tester |
 | ---- | ----- | -------- | ------ |
-| 1.1  |       |          |        |
-| ...  |       |          |        |
+| 1.1  | 26.04.2024 | Funktioniert|Lucena Samuel|
+| 2.1  | 26.04.2024 | Funktioniert|Lucena Samuel |
+| 3.1|26.04.2024|Funktioniert|Lucena Samuel|
+| 4.1 |26.04.2024|Funktioniert|Lucena Samuel|
+| 5.1 |26.04.2024|Funktioniert|Lucena Samuel|
+|6.1 |26.04.2024|Funktioniert|Lucena Samuel|
+|8.1|26.04.2024|Funktioniert|Lucena Samuel|
+|10.1|26.04.2024|Funktioniert Nicht|Lucena Samuel|
 
-✍️ Vergessen Sie nicht, ein Fazit hinzuzufügen, welches das Test-Ergebnis einordnet.
+Das meiste im Programm funktioniert, alle Berechnungen funktionieren, der Failsafe jedoch nicht.
 
-## 6 Auswerten
-
-✍️ Fügen Sie hier eine Verknüpfung zu Ihrem Lern-Bericht ein.
